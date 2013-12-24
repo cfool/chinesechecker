@@ -1,6 +1,8 @@
 #mainview
 {
     position:absolute;
+    left:10px;
+    top:10px;
     width:800px;
     height:600px;
     background-image:url("../image/Back.jpg");
