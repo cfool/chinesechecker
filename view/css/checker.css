@@ -1,0 +1,11 @@
+#mainview
+{
+    position:absolute;
+    width:800px;
+    height:600px;
+    background-image:url("../image/Back.jpg");
+}
+.ico
+{
+    position:absolute;
+}
