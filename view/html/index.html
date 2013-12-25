@@ -8,7 +8,8 @@
 <script type="text/javascript">
 $("document").ready(function(){
     $game=$.checker();
-    $game.init();
+    $game.init([[0,0],[1,1],[2,2],[3,3],[4,4],[5,5]]);
+    $("#run").click($game.run);
 });
 </script>
 </head>
@@ -16,7 +17,7 @@ $("document").ready(function(){
 <div id="mainview">
 </div>
 <div id="testarea" style="position:absolute;left:810px;top:10">
-<button onclick='$game.move("ico0",1);'>move</button>
+<button id="run">run</button>
 </div>
 </body>
 </html>

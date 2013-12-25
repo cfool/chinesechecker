@@ -7,7 +7,11 @@
     height:600px;
     background-image:url("../image/Back.jpg");
 }
-.ico
+.checker
+{
+    position:absolute;
+}
+.blank
 {
     position:absolute;
 }
