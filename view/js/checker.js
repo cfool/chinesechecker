@@ -80,10 +80,36 @@
     function pause(){
         alert("pause");
     }
+    function movesys(prev,curr) {
+        $.ajax( 
+            {
+                url: 'http://localhost/chinesechecker/system/game.php/login',
+        type: 'POST',
+        data:
+        {
+            pre: prev,
+        cur: curr       
+        },
+        dataType: 'json',
+        error: function(){
+            alert("Ooooooops! Something Wrong happened!");
+        },
+        success: function(response){
+            if (response.state != 0) {
+                alert("Incorrect account or password!");
+            }
+            else {
+                alert(response.comeurl);
+            }
+        }
+            });
+    }
+
     function move(pre,cur){
         var c = map[pre]>>4;
         var id = map[pre] & 0xf;
 
+        movesys(pre,cur);
         $('#c'+color[c]+id).animate(
             {
             left:position[cur][0]-16,
